@@ -91,7 +91,7 @@ print "Train after removing low-variance features", X.shape
 lr = LinearRegression()
 br = BayesianRidge()
 net = ElasticNetCV(l1_ratio=[.1, .7, .95, .99, 1], normalize=False)
-rf = RandomForestRegressor(max_depth=6, n_estimators=25)
+rf = RandomForestRegressor(n_estimators=75)
 
 
 ### build neural net model

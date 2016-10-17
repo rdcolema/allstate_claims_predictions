@@ -187,7 +187,7 @@ def ensemble_regressor(rgrs, data):
     if data.ndim == 1:        # for single sample predictions
         preds = []
         for rgr in rgrs:
-            if rgr != model:  # keras model predictions are formatted slightly different
+            if rgr != model:  # keras model prediction inputs are formatted slightly different
                 preds.append(rgr.predict(data)[0])
             else:
                 reshaped_data = data.reshape(1, data.shape[0])
